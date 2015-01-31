@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <meta property="og:title" content="Save The Date for Marla Greenwald and Erin Sparling's Wedding" />
+    <meta property="og:image" content="http://marlagreenwald.and.erinsparling.com/images/save-the-date.jpg" />
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <style>
       #photo {
