@@ -24,13 +24,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 //configure routes
-app.get('/', function(req, res){
-  res.writeHead(302, {
-    'Location': '/save-the-date'
-  });
-  res.end();
-});
-app.get('/save-the-date', routes.save);
+app.get('/', routes.index);
 
 //initiate the app server
 http.createServer(app).listen(app.get('port'), function(){
