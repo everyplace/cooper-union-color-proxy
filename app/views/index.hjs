@@ -2,58 +2,18 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <style>
+      a { display: block; }
       #photo {
         background:url(/images/save-the-date.jpg);
+        width:100%;
+        height:900px;
         background-size:contain;
         background-repeat:no-repeat;
         background-position: center top;
-        position:absolute;
-        top:0;
-      }
-      #us {
-        border:1px solid orange;
-        width:100px;
-        height:100px;
-        position:absolute;
-      }
-      html, body {
-        margin:0;
-        padding:0;
-        overflow:hidden;
       }
     </style>
-    <script>
-      $(function(){
-
-
-        $("<div id=photo>").appendTo("body");
-        $("<div id=us>").appendTo("body");
-        setInterval(function(){
-          $width = $(window).width();
-          $height = $(window).height();
-          imagewidth=1440;
-          imageheight=1094;
-
-          if($width>$height) {
-            //height is the limiter on the photo size
-
-            $("#us").height($height-($height*.1)).width(imagewidth*($height/imageheight)).css({"left":($width/2)-(.5*(imagewidth*($height/imageheight))), "top":($height*.05)});
-            // $("#us").html($height+','+$height/imageheight+','+imageheight*($height/imageheight));
-          } else {
-            $("#us").width($width).height(imageheight*($width/imagewidth)).css({"left":0, "top":0});
-            // $("#us").html($width+','+$width/imagewidth+','+imagewidth*($width/imagewidth));
-          }
-
-
-          $("#photo").width($width).height($height);
-
-        }, 1000)
-
-      });
-    </script>
   </head>
   <body>
-    <a href="https://docs.google.com/forms/d/1sR6Jfh2xBCFbjiEcT3rOsohiOqhIiQcNxAHJwl8irgo/viewform"></a>
+    <div id="photo"></div>
 </html>
