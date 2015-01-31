@@ -7,5 +7,9 @@
     </style>
   </head>
   <body>
-    <h1>Marla Greenwald &amp; Erin Sparling</h1>
+    <h1>Cooper Union Color Proxy</h1>
+    <a href="/colors">Example colors</a>
+    <a href="/colors/new">New Colors</a>
+    <a href="/colors/top">Top Colors</a>
+
 </html>
