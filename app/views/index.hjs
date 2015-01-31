@@ -12,24 +12,48 @@
         position:absolute;
         top:0;
       }
-      #us {
-        border:1px solid orange;
-        width:100px;
-        height:100px;
+      #area, #marla, #erin {
+        // border:1px solid orange;
+        width:50px;
+        height:50px;
         position:absolute;
       }
+
+
+      #marla {
+        left:54%;
+        top:24%
+      }
+
+      #erin {
+        left:61%;
+        top:21%;
+      }
+
+      .us {
+        cursor:pointer;
+      }
+
       html, body {
         margin:0;
         padding:0;
         overflow:hidden;
       }
+
     </style>
     <script>
       $(function(){
 
 
         $("<div id=photo>").appendTo("body");
-        $("<div id=us>").appendTo("body");
+        $("<div id=area>").appendTo("body");
+        $("<div id=marla class=us>").appendTo("#area");
+        $("<div id=erin class=us>").appendTo("#area");
+        $(".us").click(function(){
+          window.location.href = 'https://docs.google.com/forms/d/1sR6Jfh2xBCFbjiEcT3rOsohiOqhIiQcNxAHJwl8irgo/viewform';
+        });
+
+
         setInterval(function(){
           $width = $(window).width();
           $height = $(window).height();
@@ -39,10 +63,10 @@
           if($width>$height) {
             //height is the limiter on the photo size
 
-            $("#us").height($height-($height*.1)).width(imagewidth*($height/imageheight)).css({"left":($width/2)-(.5*(imagewidth*($height/imageheight))), "top":($height*.05)});
+            $("#area").height($height-($height*.1)).width(imagewidth*($height/imageheight)).css({"left":($width/2)-(.5*(imagewidth*($height/imageheight))), "top":($height*.05)});
             // $("#us").html($height+','+$height/imageheight+','+imageheight*($height/imageheight));
           } else {
-            $("#us").width($width).height(imageheight*($width/imagewidth)).css({"left":0, "top":0});
+            $("#area").width($width).height(imageheight*($width/imagewidth)).css({"left":0, "top":0});
             // $("#us").html($width+','+$width/imagewidth+','+imagewidth*($width/imagewidth));
           }
 
@@ -55,5 +79,5 @@
     </script>
   </head>
   <body>
-    <a href="https://docs.google.com/forms/d/1sR6Jfh2xBCFbjiEcT3rOsohiOqhIiQcNxAHJwl8irgo/viewform"></a>
+  </body>
 </html>
